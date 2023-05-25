@@ -15,3 +15,22 @@
 
 
 setTimeout(console.log, 5000, "ciao")
+
+
+
+
+//Schema, aggiungere GIORNO, ORA , MINUTI , SECONDI            Fino a domani ci sarebbero 64800000 millisecondi   
+// domande da fare a riccardo:
+// cosa significa window con setTimeout, valore di this 
+
+
+
+function countdown(){
+    console.log("è iniziata la lezione, svegliaaaa");
+}
+
+let timer = setTimeout(countdown, 60000);
+
+let interval = setInterval(() => {
+    console.log("Prova");
+}, 1000)
