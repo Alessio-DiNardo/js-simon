@@ -30,7 +30,7 @@
 //     console.log("Prova");
 // }, 1000)
 
-86400000
+
 
 // con l'oggetto new date() creo la data attuale e quella che mi serve per vedere quanti millisecondi ho 
 // oppure usare math.floor per ogni varriabile per calcolare il valore che mi serve
@@ -53,6 +53,11 @@ let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 let countDown = newDate("may 26, 2023, 09:30:00").getTime();
 
+//? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
+
+let now = newDate("may 25, 2023, 17:12:00").getTime();
+
+
 //? INSERISCO I SECONDI CHE SCORRONO ALL'INDIETRO
 
 
@@ -61,6 +66,6 @@ let interval = setInterval(function(){
 },1000)
 
 
-//? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
+//? Ora scrivo tutto in pagina
 
-let now = newDate("may 25, 2023, 16:53:00").getTime();
+document.getElementById("countdown").innerHTML = days + "giorni" + hours + "ore" + minutes + "minuti" + seconds + "secondi";
