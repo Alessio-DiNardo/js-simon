@@ -14,23 +14,22 @@
 
 
 
-setTimeout(console.log, 5000, "ciao")
-
-
-
-
 //Schema, aggiungere GIORNO, ORA , MINUTI , SECONDI            Fino a domani ci sarebbero 64800000 millisecondi   
 // domande da fare a riccardo:
 // cosa significa window con setTimeout, valore di this 
 
 
 
-function countdown(){
-    console.log("è iniziata la lezione, svegliaaaa");
-}
+// function countdown(){
+//     console.log("è iniziata la lezione, svegliaaaa");
+// }
 
-let timer = setTimeout(countdown, 60000);
+// let timer = setTimeout(countdown, 60000);
 
-let interval = setInterval(() => {
-    console.log("Prova");
-}, 1000)
+// let interval = setInterval(() => {
+//     console.log("Prova");
+// }, 1000)
+
+
+//? Teorie in testa. Creare 4 array per ogni tipo, un array per il giorno che arriva fino ad 01, un array per l'ora che arriva a 24,  minuti e secondi a 60, e questi numeri grazie al setInterval devono decrescere e "resettarsi" ogni volta.
+
