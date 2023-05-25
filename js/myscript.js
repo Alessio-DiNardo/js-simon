@@ -57,7 +57,7 @@ let countDown = newDate("may 26, 2023, 09:30:00").getTime();
 
 
 let interval = setInterval(function(){
-
+    console.log("ciao")
 },1000)
 
 
