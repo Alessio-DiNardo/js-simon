@@ -36,6 +36,15 @@
 // oppure usare math.floor per ogni varriabile per calcolare il valore che mi serve
 
 
+//? INSERISCO LA DATA CHE MI SERVE
+
+let countDown = newDate("may 26, 2023, 09:30:00").getTime();
+
+//? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
+
+let now = newDate("may 25, 2023, 17:12:00").getTime();
+
+
 //? Imposto la distanza tra le due date 
 
 let distance = countDown - now;
@@ -49,22 +58,14 @@ let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-//? INSERISCO LA DATA CHE MI SERVE
-
-let countDown = newDate("may 26, 2023, 09:30:00").getTime();
-
-//? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
-
-let now = newDate("may 25, 2023, 17:12:00").getTime();
 
 
 //? INSERISCO I SECONDI CHE SCORRONO ALL'INDIETRO
 
 
-let interval = setInterval(function(){
-    console.log("ciao")
-},1000)
+let interval = setInterval(function() {
 
+},1000)
 
 //? Ora scrivo tutto in pagina
 
