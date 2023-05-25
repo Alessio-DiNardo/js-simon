@@ -64,7 +64,7 @@ let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
 let interval = setInterval(function() {
-
+    console.log("hello")
 },1000)
 
 //? Ora scrivo tutto in pagina
