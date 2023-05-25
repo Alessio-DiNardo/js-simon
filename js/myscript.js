@@ -63,10 +63,13 @@ let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 //? INSERISCO I SECONDI CHE SCORRONO ALL'INDIETRO
 
 
+
+
 let interval = setInterval(function() {
-    countDown --; 
-})
+    countDown--; 
+},1000)
 
 //? Ora scrivo tutto in pagina
 
-document.getElementById("countdown").innerHTML = days + " giorni" + hours + " ore" + minutes + "minuti" + seconds + "secondi";
+document.getElementById("countdown").innerHTML = days + " giorni " + hours + " ore " + minutes + "minuti " + seconds + "secondi ";
+
