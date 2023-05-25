@@ -38,11 +38,11 @@
 
 //? INSERISCO LA DATA CHE MI SERVE
 
-let countDown = newDate("may 26, 2023, 09:30:00").getTime();
+let countDown = new Date("may 26, 2023, 09:30:00").getTime();
 
 //? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
 
-let now = newDate("may 25, 2023, 17:12:00").getTime();
+let now = new Date().getTime();
 
 
 //? Imposto la distanza tra le due date 
@@ -64,9 +64,9 @@ let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
 let interval = setInterval(function() {
-    console.log("hello")
-},1000)
+    countDown --; 
+})
 
 //? Ora scrivo tutto in pagina
 
-document.getElementById("countdown").innerHTML = days + "giorni" + hours + "ore" + minutes + "minuti" + seconds + "secondi";
+document.getElementById("countdown").innerHTML = days + " giorni" + hours + " ore" + minutes + "minuti" + seconds + "secondi";
