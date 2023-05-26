@@ -36,40 +36,44 @@
 // oppure usare math.floor per ogni varriabile per calcolare il valore che mi serve
 
 
-//? INSERISCO LA DATA CHE MI SERVE
-
-let countDown = new Date("may 26, 2023, 09:30:00").getTime();
-
-//? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
-
-let now = new Date().getTime();
-
-
-//? Imposto la distanza tra le due date 
-
-let distance = countDown - now;
-
-
-//? imposto alle variabili il calcolo dei giorni, ore, minuti e secondi
-
-
-let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
 
-//? INSERISCO I SECONDI CHE SCORRONO ALL'INDIETRO
+function counter(){
 
+    //? INSERISCO LA DATA CHE MI SERVE
 
+    let countDown = new Date("may 26, 2023, 09:30:00").getTime();
 
+    //? INSERISCO LA DATA ATTUALE CHE POI MODIFICHERò FINITO IL CODICE
 
-let interval = setInterval(function() {
-    countDown--; 
-},1000)
+    let now = new Date().getTime();
 
-//? Ora scrivo tutto in pagina
+    //? Imposto la distanza tra le due date 
 
-document.getElementById("countdown").innerHTML = days + " giorni " + hours + " ore " + minutes + "minuti " + seconds + "secondi ";
+    let distance = countDown - now;
+
+    const seconds = 1000;
+    const minute = seconds * 60;
+    const hours = minute * 60;
+    const day = hours * 24;
+
+    const missingDays = Math.floor(distance / (1000 * 60 * 60 * 24));
+    updateDigits("p#countdown", missingDays);
+
+    const missingHours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    updateDigits("p#countdown", missingHours);
+
+    const missingMinutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    updateDigits("p#countdown", missingMinutes);
+
+    const missingSeconds = Math.floor((distance % (1000 * 60)) / 1000);
+    updateDigits("p#countdown", missingSeconds);
+}
+
+function updateDigits(querySelectorString, htmlContent){
+    const element = document.querySelector(querySelectorString);
+    element.innerHTML = htmlContent;
+}
+
 
